@@ -25,6 +25,8 @@ public:
 
     const QString& url();
     const QString& uploaderPlugin();
+    /* QString ImgUploaderManager::generateImageCode(const QString& format,
+                                                  const QString& imageUrl); */
 
 private:
     void init();
