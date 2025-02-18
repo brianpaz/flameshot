@@ -68,3 +68,17 @@ const QString& ImgUploaderManager::url()
 {
     return m_urlString;
 }
+
+QString ImgUploaderManager::generateImageCode(const QString& format,
+                                              const QString& imageUrl)
+{
+    if (format == "markdown") {
+        return "![](" + imageUrl + ")";
+    } else if (format == "bbcode") {
+        return "[img]" + imageUrl + "[/img]";
+    } else if (format == "html") {
+        return "<img src=\"" + imageUrl + "\" />";
+    } else {
+        return imageUrl; 
+    } 
+}
